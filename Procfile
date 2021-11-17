@@ -1,1 +1,1 @@
-web: gunicorn babykick.wsgi
+web: gunicorn bellykick.wsgi
