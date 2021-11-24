@@ -1,5 +1,5 @@
 body {
-    background-color: #f8b2d9;
+    background-color: #F9FAFC;
 }
 
 .brand {
@@ -139,4 +139,10 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+.nav-link {
+    color: #fff;
+    display: inline;
+    padding: 0;
 }
