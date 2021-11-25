@@ -2,21 +2,26 @@
 
 {% block content %}
 
-<div class="container" id="contact-us">
-    <form class="row g-3">
-        
-        <div class="mb-3">
-            <label for="FormControlInput1" class="form-label">Your Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name here....">
+<div class="container my-4" id="contact-us">
+    <h2 class="text-center">Contact Us</h2>
 
-            <label for="FormControlInput1" class="form-label">Your Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email here....">
+    <form action="/contact/" method="POST" class="row g-3">
+        {% csrf_token %}
+        <div class="col-md-8 mt-3 offset-md-2">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name here....">
+
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email here....">
+
+            <label for="phone" class="form-label">Your Number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your number here....">
         </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Enter your text here...."></textarea>
+        <div class="col-md-8 mt-3 offset-md-2">
+            <label for="desc" class="form-label">Your Message</label>
+            <textarea class="form-control" id="desc" name="desc" rows="5" placeholder="Enter your text here...."></textarea>
         </div>
-        <div class="text-center">
+        <div class="text-center col-md-8 mt-3 offset-md-2">
             <input class="btn btn-primary btn-lg" type="submit" value="Submit">
         </div>
 
