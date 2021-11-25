@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Contact
 from .forms import CommentForm
 
 
@@ -32,7 +32,6 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-
 
     def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -77,3 +76,14 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        phone = request.POST.get("phone")
+        desc = request.POST.get("desc")
+        instance = Contact(name=name, email=email, phone=phone, desc=desc)
+        instance.save()
+
+    return render(request, 'contact.html', {})
