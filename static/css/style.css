@@ -146,3 +146,8 @@ body {
     display: inline;
     padding: 0;
 }
+
+.btn-lg {
+    color: #fff;
+    margin-bottom: 10px;
+}
