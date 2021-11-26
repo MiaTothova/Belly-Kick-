@@ -17,7 +17,7 @@
                                 <img class="card-img-top"
                                     src="https://upjourney.com/wp-content/uploads/2019/12/what-to-do-when-you-find-out-you-are-pregnant.jpg">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" src="{{ post.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
@@ -45,7 +45,7 @@
     <div class="text-center">
         <h3>Want to get in touch or want to share your story with us? Get in touch!</h3>
         
-        <a href="contact.html" class="btn btn-primary btn-lg btn-link" role="button" aria-disabled="true">Contact Us</a>
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg btn-link" role="button" aria-disabled="true">Contact Us</a>
     </div>
     {% if is_paginated %}
     <nav aria-label="Page navigation">
