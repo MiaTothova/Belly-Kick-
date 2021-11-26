@@ -1,2 +1,2 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![](https://github.com/MiaTothova/Belly-Kick-/blob/main/images/responsive.png)
 
